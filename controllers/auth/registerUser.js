@@ -5,7 +5,7 @@ const {HttpError} = require("../../helpers")
 
 const registerUser = async (req,res) => {
     const {email, password} = req.body
-    console.log(email)
+    
     const user = await User.findOne({email});
 
     if (user) {
